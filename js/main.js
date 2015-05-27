@@ -72,6 +72,9 @@ function InvoiceController($scope) {
       }
     }
 
+    $scope.makePrintableBarcode = function(){
+        $("#qr_png").attr("src", $("qrcode > canvas")[0].toDataURL())    
+    }
 
 };
 

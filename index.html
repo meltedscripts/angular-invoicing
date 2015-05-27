@@ -37,12 +37,13 @@
     <tr>
       <td>
         <h4>Invoice #<input type="text" id="invoice_number" ng-model="invoice.invoice_number" /></h4>
-        <qrcode version="5" error-correction-level="M" size="60" data="{{$eval('[
+        <qrcode id="qr_canvas" ng-hide="printMode" version="5" error-correction-level="M" size="60" data="{{$eval('[
             invoice.invoice_number,
             invoice.tax,
             calculate_tax() + invoice_sub_total()
-            ]') }}">
+            ]')}}">
         </qrcode>
+        <img id="qr_png" ng-show="printMode">
       </td>
       <td align="right">
         <input type='file' id="imgInp" />
@@ -125,7 +126,7 @@
   <div class="noPrint">
     <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printInfo()">Print</a>
     <a href="#" class="btn btn-primary" ng-click="clearLocalStorage()">Reset</a>
-    <a href="#" class="btn btn-primary" ng-hide="printMode" ng-click="printMode = true;">Turn On Print Mode</a>
+    <a href="#" class="btn btn-primary" ng-hide="printMode" ng-click="printMode = true; makePrintableBarcode();">Turn On Print Mode</a>
     <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printMode = false;">Turn Off Print Mode</a>
   </div>
 </div>
