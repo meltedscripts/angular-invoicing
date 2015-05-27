@@ -1,3 +1,5 @@
+angular.module('jqanim', ['monospaced.qrcode'])
+
 function InvoiceController($scope) {
 
   $scope.logoRemoved = false;
@@ -73,7 +75,7 @@ function InvoiceController($scope) {
 
 };
 
-angular.module('jqanim', []).directive('jqAnimate', function(){ 
+angular.module('jqanim').directive('jqAnimate', function(){ 
   return function(scope, instanceElement){ 
       setTimeout(function() {instanceElement.show('slow');}, 0); 
   } 

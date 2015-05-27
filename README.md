@@ -1,3 +1,9 @@
+## Barcoded version
+
+This is a fork of the metaware invoicing code.
+[Angular Invoicing](http://metaware.github.io/angular-invoicing).
+With the addition of a qr barcode containing the invoice data.
+
 ## Angular Invoicing
 
 Use this extremely small and lightweight project built in Angular JS to build your one off Invoices. No monthly fees, No Subscriptions - No heavy duty features, Just simple invoices.
