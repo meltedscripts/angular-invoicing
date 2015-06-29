@@ -60,3 +60,13 @@ div.container{
   position: relative;
   color: #ce0c15;
 }
+
+
+#printbutton {
+  background-color: #EE3C1E!important;
+  border-color: #EE3C1E!important;
+}
+
+#printbutton:hover {
+  background-color: #6E1C0E!important;
+}
